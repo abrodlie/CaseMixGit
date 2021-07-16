@@ -1,0 +1,30 @@
+---
+title: "CaseMixCharts"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+The following chart shows that non-elective case-mix was higher in 20/21 than in prior years. Possibly due to the impact of less watchful waiting
+
+```{r Non-elective chart, echo = FALSE}
+NELCharts <- readRDS("NELCharts.RDS")
+
+NELCharts
+
+```
+
+The next chart shows that elective case-mix was lower in 20/21 than in prior years during the lockdown months. Possibly due to avoiding complex patients who would be at higher risk of COVID.
+
+```{r Elective chart, echo = FALSE}
+ELCharts <- readRDS("ELCharts.RDS")
+
+ELCharts
+
+```
